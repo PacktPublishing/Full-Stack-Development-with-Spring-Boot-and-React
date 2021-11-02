@@ -22,5 +22,5 @@ npm start
 OR if you are using yarn
 
 ```
-yarn star
+yarn start
 ```
