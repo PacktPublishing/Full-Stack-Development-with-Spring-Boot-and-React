@@ -23,7 +23,7 @@ function EditCar(props) {
     })      
     setOpen(true);
   }
-  
+
   // Close the modal form 
   const handleClose = () => {
     setOpen(false);
@@ -39,31 +39,31 @@ function EditCar(props) {
     props.updateCar(car, props.data.id);
     handleClose();
   }
- 
+
   return(
     <div>
       <button onClick={handleClickOpen}>Edit</button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Edit car</DialogTitle>
-        <DialogContent>
-          <input placeholder="Brand" name="brand" 
-            value={car.brand} onChange={handleChange}/><br/> 
-          <input placeholder="Model" name="model" 
-            value={car.model} onChange={handleChange}/><br/>
-          <input placeholder="Color" name="color" 
-            value={car.color} onChange={handleChange}/><br/>
-          <input placeholder="Year" name="year" 
-            value={car.year} onChange={handleChange}/><br/>
-          <input placeholder="Price" name="price" 
-            value={car.price} onChange={handleChange}/><br/>
-        </DialogContent>
-        <DialogActions>
-          <button onClick={handleClose}>Cancel</button>
-          <button onClick={handleSave}>Save</button>
-        </DialogActions>
-      </Dialog>            
+          <DialogTitle>Edit car</DialogTitle>
+          <DialogContent>
+            <input placeholder="Brand" name="brand" 
+              value={car.brand} onChange={handleChange}/><br/> 
+            <input placeholder="Model" name="model" 
+              value={car.model} onChange={handleChange}/><br/>
+            <input placeholder="Color" name="color" 
+              value={car.color} onChange={handleChange}/><br/>
+            <input placeholder="Year" name="year" 
+              value={car.year} onChange={handleChange}/><br/>
+            <input placeholder="Price" name="price" 
+              value={car.price} onChange={handleChange}/><br/>
+          </DialogContent>
+          <DialogActions>
+            <button onClick={handleClose}>Cancel</button>
+            <button onClick={handleSave}>Save</button>
+          </DialogActions>
+        </Dialog>            
     </div>
-  );
+  );  
 }
 
 export default EditCar;

@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { SERVER_URL } from '../constants.js'
-import { 
-  DataGrid, 
-  GridToolbarContainer, 
-  GridToolbarExport, 
-  gridClasses } from '@mui/x-data-grid';
+import { DataGrid, GridToolbarContainer, GridToolbarExport, gridClasses } from '@mui/x-data-grid';
 import Snackbar from '@mui/material/Snackbar';
 import AddCar from './AddCar.js';
 import EditCar from './EditCar.js';
 
 function CustomToolbar() {
   return (
-    <GridToolbarContainer 
-      className={gridClasses.toolbarContainer}>
+    <GridToolbarContainer className={gridClasses.toolbarContainer}>
       <GridToolbarExport />
     </GridToolbarContainer>
   );
@@ -36,19 +31,19 @@ function Carlist() {
   const onDelClick = (url) => {
     if (window.confirm("Are you sure to delete?")) {
       fetch(url,  {method:  'DELETE'})
-      .then(response => { 
+      .then(response => {
         if (response.ok) {
           fetchCars();
           setOpen(true);
         }
         else {
-          alert('Something went wrsong!');
-        }  
+          alert('Something went wrong!');
+        }
       })
       .catch(err => console.error(err))
     }
   }
-
+  
   // Add a new car 
   const addCar = (car) => {
     fetch(SERVER_URL  +  'api/cars',
@@ -67,8 +62,8 @@ function Carlist() {
     })
     .catch(err => console.error(err))
   }
-  
-  // Update car 
+
+  // Update existing car
   const updateCar = (car, link) => {
     fetch(link,
       { 
@@ -88,7 +83,7 @@ function Carlist() {
     })
     .catch(err => console.error(err))
   }
-
+   
   const columns = [
     {field: 'brand', headerName: 'Brand', width: 200},
     {field: 'model', headerName: 'Model', width: 200},
@@ -100,21 +95,20 @@ function Carlist() {
       headerName: '', 
       sortable: false,
       filterable: false,
-      renderCell: row => 
-        <EditCar 
-          data={row} 
-          updateCar={updateCar} />
-    },  
+      renderCell: row => <EditCar 
+                            data={row} 
+                            updateCar={updateCar} />
+    },
     {
       field: '_links.self.href', 
       headerName: '', 
       sortable: false,
       filterable: false,
       renderCell: row => 
-        <button 
-           onClick={() => onDelClick(row.id)}>Delete
-        </button>
-    }  
+                    <button 
+                      onClick={() => onDelClick(row.id)}>Delete
+                    </button>
+    }
   ];
   
   return(
@@ -125,8 +119,9 @@ function Carlist() {
           rows={cars} 
           columns={columns} 
           disableSelectionOnClick={true}
+          getRowId={row => row._links.self.href}
           components={{ Toolbar: CustomToolbar }}
-          getRowId={row => row._links.self.href}/>
+        />
         <Snackbar
           open={open}
           autoHideDuration={2000}
@@ -136,7 +131,6 @@ function Carlist() {
       </div>
     </React.Fragment>
   );
-
 }
 
 export default Carlist;

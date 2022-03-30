@@ -24,15 +24,15 @@ function AddCar(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  
-  const handleChange = (event) => {
-    setCar({...car, [event.target.name]: event.target.value});
-  }
 
   // Save car and close modal form 
   const handleSave = () => {
     props.addCar(car);
     handleClose();
+  }
+
+  const handleChange = (event) => {
+    setCar({...car, [event.target.name]: event.target.value});
   }
   
   return(
@@ -48,17 +48,17 @@ function AddCar(props) {
           <input placeholder="Color" name="color" 
             value={car.color} onChange={handleChange}/><br/>
           <input placeholder="Year" name="year" 
-            value={car.year} onChange={handleChange}/><br/>
+             value={car.year} onChange={handleChange}/><br/>
           <input placeholder="Price" name="price" 
-            value={car.price} onChange={handleChange}/><br/>
+             value={car.price} onChange={handleChange}/><br/>
         </DialogContent>
         <DialogActions>
-          <button onClick={handleClose}>Cancel</button>
-          <button onClick={handleSave}>Save</button>
+           <button onClick={handleClose}>Cancel</button>
+           <button onClick={handleSave}>Save</button>
         </DialogActions>
       </Dialog>            
     </div>
-  );
+  );  
 }
 
 export default AddCar;
