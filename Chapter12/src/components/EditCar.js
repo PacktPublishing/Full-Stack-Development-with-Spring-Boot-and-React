@@ -28,7 +28,7 @@ function EditCar(props) {
     })      
     setOpen(true);
   }
-  
+
   // Close the modal form 
   const handleClose = () => {
     setOpen(false);
@@ -44,16 +44,16 @@ function EditCar(props) {
     props.updateCar(car, props.data.id);
     handleClose();
   }
- 
+
   return(
     <div>
       <IconButton onClick={handleClickOpen}>
-          <EditIcon color="primary" />
+        <EditIcon color="primary" />
       </IconButton>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Edit car</DialogTitle>
-        <DialogContent>
-          <Stack spacing={2} mt={1}>
+          <DialogTitle>Edit car</DialogTitle>
+          <DialogContent>
+            <Stack spacing={2} mt={1}>
               <TextField label="Brand" name="brand" autoFocus
                 variant="standard" value={car.brand} 
                 onChange={handleChange}/>
@@ -69,15 +69,15 @@ function EditCar(props) {
               <TextField label="Price" name="price" 
                 variant="standard" value={car.price} 
                 onChange={handleChange}/>
-            </Stack>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSave}>Save</Button>
-        </DialogActions>
-      </Dialog>            
+            </Stack>         
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Cancel</Button>
+            <Button onClick={handleSave}>Save</Button>
+          </DialogActions>
+        </Dialog>            
     </div>
-  );
+  );  
 }
 
 export default EditCar;
