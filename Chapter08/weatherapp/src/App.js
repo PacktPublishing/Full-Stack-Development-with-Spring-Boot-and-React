@@ -7,8 +7,8 @@ function App() {
   const [icon, setIcon] = useState('');
   const [isReady, setReady] = useState(false);
 
-  React.useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&APPID=c36b03a963176b9a639859e6cf279299&units=metric`)
+  React.useEffect(() => {   
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&APPID=YOUR_API_KEY&units=metric`)
     .then(result => result.json())
     .then(jsonresult => {
       setTemp(jsonresult.main.temp);
@@ -24,7 +24,9 @@ function App() {
       <div className="App">
         <p>Temperature: {temp} °C</p>
         <p>Description: {desc}</p>
-        <img  src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="Weather icon"  />
+        <img
+          src={`http://openweathermap.org/img/wn/${icon}@2x.png`}       
+          alt="Weather icon" />
       </div>
     );
   }
@@ -32,5 +34,4 @@ function App() {
     return <div>Loading...</div>
   }
 }
-
 export default App;
