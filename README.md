@@ -1,5 +1,5 @@
-# Full Stack Development with Spring Boot and React	
-Full Stack Development with Spring Boot and React, published by Packt
+# Full Stack FastAPI, React, and MongoDB	
+Full Stack FastAPI, React, and MongoDB, published by Packt
 
 <a href="https://www.packtpub.com/product/full-stack-development-with-spring-boot-and-react/9781801816786"><img src="https://static.packt-cdn.com/products/9781801816786/cover/smaller" alt="Full Stack Development with Spring Boot and React" height="256px" align="right"></a>
 
@@ -31,36 +31,28 @@ All of the project files are organized into folders. For example, Chapter01.
 The code will look like the following:
 
 ```
-
-public class Car {
-@Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-private long id;
-private String brand, model, color, registerNumber;
-private int year, price;
-}
-
+from fastapi import FastAPI
+app = FastAPI()
+@app.get(“/”)
+async def root():
+ return {“message”: “Hello FastAPI”}
 
 ```
 
 **Following is what you need for this book:**
 
-Getting started with full stack development can be daunting. Even developers who are familiar with the best tools, such as Spring Boot and React, can struggle to nail the basics, let alone master the more advanced elements. If you’re one of these developers, this comprehensive guide covers everything you need!.
+If you need to develop web applications quickly, where do you turn? Enter the FARM stack. The FARM stack combines the power of the Python ecosystem with REST and MongoDB and makes building web applications easy and fast.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-16).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781801816786_ColorImages.pdf).
-
-## Code in Action
-
-Click on the following link to see the Code in Action: [Youtube link](https://bit.ly/3t3Qe4r)
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/18OWu).
 
 ### Related products <Other books you may enjoy>
-* Full-Stack Web Development with GraphQL and React [[Packt]](https://www.packtpub.com/product/full-stack-web-development-with-graphql-and-react-second-edition/9781801077880) [[Amazon]](https://www.amazon.com/Full-Stack-Web-Development-GraphQL-React/dp/1801077886)
+* Building Python Web APIs with FastAPI  [[Packt]](https://www.packtpub.com/product/building-web-apis-with-fastapi-and-python/9781801076630) [[Amazon]](https://www.amazon.com/Building-Python-APIs-FastAPI-high-performance/dp/1801076634)
 
-* Modern API Development with Spring and Spring Boot [[Packt]](https://www.packtpub.com/product/modern-api-development-with-spring-and-spring-boot/9781800562479) [[Amazon]](https://www.amazon.com/Modern-API-Development-Spring-Boot/dp/1800562470)
+* React Projects - Second Edition [[Packt]](https://www.packtpub.com/product/react-projects-second-edition/9781801070638) [[Amazon]](https://www.amazon.in/Full-Stack-React-Projects-development-building/dp/1839215410)
 
 ## Get to Know the Author
-**Juha Hinkula** is a software development lecturer at Haaga-Helia University of Applied Sciences in Finland. He received an MSc degree in computer science from the University of Helsinki. He has over 18 years of industry experience in software development. Over the past few years, he has focused on modern full stack development. He is also a passionate mobile developer with Android-native technology and React Native.	
+**Marko Aleksendrić** is a graduate of the University of Belgrade, Serbia, with a Ph.D. and also a Master’s degree in control engineering. He is a self-taught full-stack developer and former scientist and works as an analyst in a trade promotion agency. He started his programming journey with Visual Basic and Fortran 77 for numeric simulations. Upon discovering Python (version 2.3), he started using it for all kinds of automation tasks: building reporting pipelines and exporting measurement data from instruments into Excel or similar user-friendly reporting tools.
 
 
