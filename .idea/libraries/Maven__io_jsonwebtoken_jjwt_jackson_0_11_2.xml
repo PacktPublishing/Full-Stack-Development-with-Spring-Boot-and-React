@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.jsonwebtoken:jjwt-jackson:0.11.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt-jackson/0.11.2/jjwt-jackson-0.11.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt-jackson/0.11.2/jjwt-jackson-0.11.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt-jackson/0.11.2/jjwt-jackson-0.11.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
