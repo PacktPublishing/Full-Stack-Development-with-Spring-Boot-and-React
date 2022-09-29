@@ -1,7 +1,7 @@
 ## Important note
 
 The `WebSecurityConfigurerAdapter` is deprecated in Spring Boot version 2.7. 
-You can still use Sprgin Boot version 2.6.x by changing the version in your pom.xml file, for example
+You can still use Spring Boot version 2.6.x by changing the version in your pom.xml file, for example
 ```
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
