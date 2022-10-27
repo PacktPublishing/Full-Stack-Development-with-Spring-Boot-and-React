@@ -59,3 +59,7 @@ Click on the following link to see the Code in Action: [Youtube link](https://bi
 
 ## Get to Know the Author
 **Juha Hinkula** is a software development lecturer at Haaga-Helia University of Applied Sciences in Finland. He received an MSc degree in computer science from the University of Helsinki. He has over 18 years of industry experience in software development. Over the past few years, he has focused on modern full stack development. He is also a passionate mobile developer with Android-native technology and React Native.	
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801816786">https://packt.link/free-ebook/9781801816786 </a> </p>
